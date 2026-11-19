@@ -9,23 +9,85 @@ header{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;border-radi
 header h1{margin:0 0 8px;font-size:28px}header p{margin:4px 0;opacity:.92}
 .stats{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap}.stat{background:rgba(255,255,255,.16);padding:8px 14px;border-radius:10px;font-size:14px}
 .toolbar{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
-input{flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px}
+input,select{padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;background:var(--card);color:var(--ink)}
+input{flex:1;min-width:220px}
+select{min-width:180px}
 section{margin:26px 0}section h2{font-size:18px;margin-bottom:10px}section h2 small{color:var(--sub);font-weight:400}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
 .item{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink);text-decoration:none;transition:.15s}
 .item:hover{border-color:var(--brand);box-shadow:0 4px 14px rgba(37,99,235,.12);text-decoration:none;transform:translateY(-1px)}
 .item b{font-size:14px}.item span{font-size:12px;color:var(--sub);margin-top:4px}
+.empty{text-align:center;color:var(--sub);padding:48px 0;font-size:15px}
+.error{text-align:center;color:var(--sub);padding:48px 0;font-size:15px}
+.error code{background:#f1f3f5;padding:2px 6px;border-radius:4px;font-size:13px;color:#c7254e}
 footer{text-align:center;color:var(--sub);font-size:13px;margin:40px 0}
 </style></head><body><div class="wrap">
 <header><h1>FDE 训练中心 · 全项目 MVP 开发提示词</h1>
 <p>基于 FastAPI + Harness 工程 + 知识库系统 · 每份提示词可在 90 分钟内指导产出一个可运行 MVP</p>
 <p>覆盖系统内全部项目，每项目一份独立文档（可在线查看 / 下载 DOCX）</p>
-<div class="stats"><div class="stat">📦 项目总数：94</div><div class="stat">🏷 业务域：34</div><div class="stat">📄 文档：94 份 DOCX</div></div></header>
-<div class="toolbar"><input id="q" placeholder="🔍 输入项目名称、公司或业务域快速筛选…" oninput="filter()"></div>
-<div id="content"><section><h2>HarmonyOS / OpenHarmony · 端边云 <small>(1)</small></h2><div class="grid"><a class="item" href="05-harmony.html"><b>05 鸿蒙设备协同</b><span></span></a></div></section><section><h2>业务外包 <small>(3)</small></h2><div class="grid"><a class="item" href="86-fsg-retail-audit.html"><b>86 零售终端巡检与整改任务</b><span>上海外服（集团）有限公司</span></a><a class="item" href="87-fsg-document-quality.html"><b>87 金融数据文档外包质检</b><span>上海外服（集团）有限公司</span></a><a class="item" href="88-fsg-production-handover.html"><b>88 生产岗位培训与工序交接</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>人事管理 <small>(3)</small></h2><div class="grid"><a class="item" href="74-fsg-onboarding.html"><b>74 跨区域入职材料一次告知</b><span>上海外服（集团）有限公司</span></a><a class="item" href="75-fsg-social-service.html"><b>75 社保服务资料与规则版本核对</b><span>上海外服（集团）有限公司</span></a><a class="item" href="76-fsg-contract.html"><b>76 合同续签与变更交接追溯</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>人力资源 <small>(2)</small></h2><div class="grid"><a class="item" href="54-dlg-fsg-onboarding.html"><b>54 跨区域员工入职材料协同</b><span>上海外服（集团）有限公司</span></a><a class="item" href="55-dlg-fsg-payroll.html"><b>55 薪酬服务变更核对</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>人才派遣 <small>(3)</small></h2><div class="grid"><a class="item" href="77-fsg-assignment.html"><b>77 派遣岗位需求与到岗交接</b><span>上海外服（集团）有限公司</span></a><a class="item" href="78-fsg-attendance.html"><b>78 派遣项目考勤异常双向确认</b><span>上海外服（集团）有限公司</span></a><a class="item" href="79-fsg-transfer.html"><b>79 转岗与离岗服务未结项闭环</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>企业内部服务 <small>(1)</small></h2><div class="grid"><a class="item" href="04-qinghe.html"><b>04 青禾报销助手</b><span></span></a></div></section><section><h2>会展旅行 <small>(2)</small></h2><div class="grid"><a class="item" href="72-dlg-travel-itinerary.html"><b>72 商务会展行程变更协同</b><span>上海靖达国际商务会展旅行有限公司</span></a><a class="item" href="73-dlg-travel-conference.html"><b>73 会议活动服务需求汇总</b><span>上海靖达国际商务会展旅行有限公司</span></a></div></section><section><h2>会展物流 <small>(2)</small></h2><div class="grid"><a class="item" href="68-dlg-transport-tracking.html"><b>68 展品运输节点与异常追踪</b><span>上海依佩克国际运输有限公司</span></a><a class="item" href="69-dlg-transport-return.html"><b>69 撤展回运与未结事项</b><span>上海依佩克国际运输有限公司</span></a></div></section><section><h2>保险服务 <small>(1)</small></h2><div class="grid"><a class="item" href="01-calder.html"><b>01 卡尔德保险</b><span></span></a></div></section><section><h2>农业 <small>(4)</small></h2><div class="grid"><a class="item" href="36-agriculture-irrigation.html"><b>36 种植灌溉与农事记录</b><span>禾丰种植合作社</span></a><a class="item" href="37-agriculture-traceability.html"><b>37 农产品批次追溯与召回准备</b><span>禾丰农产</span></a><a class="item" href="38-agriculture-demand.html"><b>38 农产品采收与产销协调</b><span>丰野产销联盟</span></a><a class="item" href="93-oss-farmos.html"><b>93 farmOS 农事日志与采收追溯</b><span>禾川种植合作社（虚构）</span></a></div></section><section><h2>制造 <small>(4)</small></h2><div class="grid"><a class="item" href="07-manufacturing.html"><b>07 订单排产与设备异常</b><span>星衡精密</span></a><a class="item" href="15-manufacturing-quality.html"><b>15 质量追溯与缺陷归因</b><span>星衡精密</span></a><a class="item" href="16-manufacturing-maintenance.html"><b>16 设备点检与维修协同</b><span>海岳机电</span></a><a class="item" href="92-oss-thingsboard.html"><b>92 ThingsBoard 设备遥测与检修协同</b><span>岚桥设备运维站（虚构）</span></a></div></section><section><h2>制造协同 <small>(1)</small></h2><div class="grid"><a class="item" href="03-huaheng.html"><b>03 华衡智造</b><span></span></a></div></section><section><h2>医疗 <small>(4)</small></h2><div class="grid"><a class="item" href="08-healthcare.html"><b>08 出院随访与患者协作</b><span>清禾综合医院</span></a><a class="item" href="17-healthcare-supplies.html"><b>17 医用耗材与批次追溯</b><span>清禾综合医院</span></a><a class="item" href="18-healthcare-appointments.html"><b>18 门诊预约与分诊协作</b><span>东湖门诊中心</span></a><a class="item" href="91-oss-openmrs.html"><b>91 OpenMRS 就诊记录与随访交接</b><span>南溪社区健康中心（虚构）</span></a></div></section><section><h2>品牌传播 <small>(2)</small></h2><div class="grid"><a class="item" href="70-dlg-advertising-brief.html"><b>70 品牌需求简报与创意评审</b><span>上海广告有限公司</span></a><a class="item" href="71-dlg-advertising-delivery.html"><b>71 多渠道传播素材交付</b><span>上海广告有限公司</span></a></div></section><section><h2>国际贸易 <small>(2)</small></h2><div class="grid"><a class="item" href="66-dlg-trade-documents.html"><b>66 进出口代理单证一致性</b><span>上海外综服国际贸易有限公司</span></a><a class="item" href="67-dlg-trade-settlement.html"><b>67 贸易服务结算与费用追溯</b><span>上海外综服国际贸易有限公司</span></a></div></section><section><h2>展览组织 <small>(6)</small></h2><div class="grid"><a class="item" href="58-dlg-industrial-leads.html"><b>58 工业展会线索分配与跟进</b><span>上海工业商务展览有限公司</span></a><a class="item" href="59-dlg-industrial-matching.html"><b>59 供需对接与技术交流需求</b><span>上海工业商务展览有限公司</span></a><a class="item" href="60-dlg-modern-design.html"><b>60 展示方案与版本评审</b><span>上海现代国际展览有限公司</span></a><a class="item" href="61-dlg-modern-supplier.html"><b>61 展览服务供应商交接</b><span>上海现代国际展览有限公司</span></a><a class="item" href="62-dlg-itpc-delegation.html"><b>62 境外参展团组材料管理</b><span>上海外经贸商务展览有限公司</span></a><a class="item" href="63-dlg-itpc-service.html"><b>63 展商咨询知识与服务转派</b><span>上海外经贸商务展览有限公司</span></a></div></section><section><h2>展馆运营 <small>(2)</small></h2><div class="grid"><a class="item" href="56-dlg-venue-schedule.html"><b>56 场馆排期与需求变更</b><span>上海东浩会展经营有限公司</span></a><a class="item" href="57-dlg-venue-workorder.html"><b>57 场馆设施工单闭环</b><span>上海东浩会展经营有限公司</span></a></div></section><section><h2>建筑 <small>(3)</small></h2><div class="grid"><a class="item" href="30-construction-change.html"><b>30 工程变更与签证协同</b><span>远筑工程</span></a><a class="item" href="31-construction-safety.html"><b>31 施工隐患与整改闭环</b><span>远筑工程</span></a><a class="item" href="32-construction-materials.html"><b>32 工程物资与施工计划协同</b><span>城澜建设</span></a></div></section><section><h2>房地产 <small>(3)</small></h2><div class="grid"><a class="item" href="33-property-repairs.html"><b>33 物业维修与住户服务</b><span>融景物业</span></a><a class="item" href="34-property-leasing.html"><b>34 商业租赁与空间交付</b><span>融景园区</span></a><a class="item" href="35-property-handover.html"><b>35 交房缺陷与整改协同</b><span>城居发展</span></a></div></section><section><h2>招聘及灵活用工 <small>(3)</small></h2><div class="grid"><a class="item" href="83-fsg-recruiting.html"><b>83 招聘需求澄清与面试协同</b><span>上海外服（集团）有限公司</span></a><a class="item" href="84-fsg-retail-staffing.html"><b>84 零售旺季排班缺岗与补位</b><span>上海外服（集团）有限公司</span></a><a class="item" href="85-fsg-warehouse-staffing.html"><b>85 仓储高峰补员与班次交接</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>政务 <small>(5)</small></h2><div class="grid"><a class="item" href="45-government-service.html"><b>45 办事材料预检与服务协同</b><span>云州市便民服务中心</span></a><a class="item" href="46-government-assets.html"><b>46 公共设施报修与资产协同</b><span>云州公共设施中心</span></a><a class="item" href="47-government-records.html"><b>47 档案检索与查阅协同</b><span>云州档案服务中心</span></a><a class="item" href="90-oss-paperless.html"><b>90 Paperless 档案归集与版本检索</b><span>澄海档案服务室（虚构）</span></a><a class="item" href="94-oss-ushahidi.html"><b>94 Ushahidi 群众报告核实与资源交接</b><span>溪原社区应急联络站（虚构）</span></a></div></section><section><h2>教育 <small>(3)</small></h2><div class="grid"><a class="item" href="12-education.html"><b>12 实习管理与教学改进</b><span>知行职业学院</span></a><a class="item" href="25-education-enrollment.html"><b>25 排课选课与教务协作</b><span>知行职业学院</span></a><a class="item" href="26-education-support.html"><b>26 学习支持与辅导协作</b><span>北辰在线学院</span></a></div></section><section><h2>文旅 <small>(3)</small></h2><div class="grid"><a class="item" href="39-travel-hotel.html"><b>39 酒店房态与入住协同</b><span>山海旅居</span></a><a class="item" href="40-travel-attractions.html"><b>40 景区客流与服务调度</b><span>青麓景区</span></a><a class="item" href="41-travel-tours.html"><b>41 旅行行程与异常协作</b><span>行知旅行</span></a></div></section><section><h2>物流 <small>(3)</small></h2><div class="grid"><a class="item" href="10-logistics.html"><b>10 运输异常与签收协作</b><span>远川物流</span></a><a class="item" href="21-logistics-warehouse.html"><b>21 仓内拣选与装车核验</b><span>远川物流</span></a><a class="item" href="22-logistics-settlement.html"><b>22 运费对账与计费争议</b><span>东航陆运</span></a></div></section><section><h2>电商 <small>(3)</small></h2><div class="grid"><a class="item" href="48-ecommerce-returns.html"><b>48 退货验收与售后协同</b><span>万象优选</span></a><a class="item" href="49-ecommerce-content.html"><b>49 商品上架与资料审核</b><span>万象商家中心</span></a><a class="item" href="50-ecommerce-marketing.html"><b>50 促销规则与活动复盘</b><span>星澜电商</span></a></div></section><section><h2>科研 <small>(4)</small></h2><div class="grid"><a class="item" href="06-research.html"><b>06 报销审核与跨部门协作</b><span>澄岳研究院</span></a><a class="item" href="13-research-procurement.html"><b>13 科研采购与供应商交付</b><span>澄岳研究院</span></a><a class="item" href="14-research-equipment.html"><b>14 共享设备预约与维护</b><span>启明联合实验室</span></a><a class="item" href="89-oss-docling.html"><b>89 Docling 技术文档解析与知识入库</b><span>青岚技术资料中心（虚构）</span></a></div></section><section><h2>能源 <small>(3)</small></h2><div class="grid"><a class="item" href="27-energy-inspection.html"><b>27 风电巡检与运维协同</b><span>青原新能源</span></a><a class="item" href="28-energy-consumption.html"><b>28 园区能耗与异常定位</b><span>瀚川工业园</span></a><a class="item" href="29-energy-solar.html"><b>29 光伏发电与资产巡检</b><span>晨曦光伏</span></a></div></section><section><h2>薪酬福利 <small>(3)</small></h2><div class="grid"><a class="item" href="80-fsg-payroll.html"><b>80 薪酬变更版本与双人复核</b><span>上海外服（集团）有限公司</span></a><a class="item" href="81-fsg-benefit.html"><b>81 福利报销缺件与规则溯源</b><span>上海外服（集团）有限公司</span></a><a class="item" href="82-fsg-consultation.html"><b>82 员工薪酬福利咨询工单分流</b><span>上海外服（集团）有限公司</span></a></div></section><section><h2>赛事运营 <small>(2)</small></h2><div class="grid"><a class="item" href="64-dlg-sports-volunteers.html"><b>64 赛事志愿者排班与交接</b><span>上海东浩兰生赛事管理有限公司</span></a><a class="item" href="65-dlg-sports-supplies.html"><b>65 赛事补给物资与站点协同</b><span>上海东浩兰生赛事管理有限公司</span></a></div></section><section><h2>通信 <small>(3)</small></h2><div class="grid"><a class="item" href="51-telecom-workorders.html"><b>51 宽带装维与客户协作</b><span>青岚网络服务</span></a><a class="item" href="52-telecom-alarms.html"><b>52 网络告警与故障协同</b><span>青岚网络服务</span></a><a class="item" href="53-telecom-billing.html"><b>53 套餐账单与客服解释</b><span>澜海通信</span></a></div></section><section><h2>金融 <small>(3)</small></h2><div class="grid"><a class="item" href="11-finance.html"><b>11 财报研究与引用核验</b><span>Helix Capital</span></a><a class="item" href="23-finance-expense.html"><b>23 授信材料预检与审批协同</b><span>云岚企业金融</span></a><a class="item" href="24-finance-reconciliation.html"><b>24 支付对账与差错追踪</b><span>恒川支付运营</span></a></div></section><section><h2>金融研究 <small>(1)</small></h2><div class="grid"><a class="item" href="02-helix.html"><b>02 赫利克斯资本</b><span></span></a></div></section><section><h2>零售 <small>(3)</small></h2><div class="grid"><a class="item" href="09-retail.html"><b>09 门店补货与库存协同</b><span>拾光连锁</span></a><a class="item" href="19-retail-membership.html"><b>19 会员权益与门店服务</b><span>拾光连锁</span></a><a class="item" href="20-retail-opening.html"><b>20 开店筹备与运营验收</b><span>青杉生活超市</span></a></div></section><section><h2>餐饮 <small>(3)</small></h2><div class="grid"><a class="item" href="42-food-kitchen.html"><b>42 后厨出品与前厅协作</b><span>知味餐饮</span></a><a class="item" href="43-food-purchasing.html"><b>43 中央厨房备料与损耗</b><span>知味中央厨房</span></a><a class="item" href="44-food-franchise.html"><b>44 连锁巡店与运营改进</b><span>禾里连锁餐饮</span></a></div></section></div>
+<div class="stats" id="stats"></div></header>
+<div class="toolbar">
+<input id="q" placeholder="🔍 输入项目名称、公司或业务域快速筛选…" oninput="filter()" aria-label="搜索项目">
+<select id="sector" onchange="filter()" aria-label="按业务域筛选"><option value="">全部业务域</option></select>
+</div>
+<div id="content"><p class="meta" id="loading">加载中…</p></div>
+<noscript><p class="error">本页面需要启用 JavaScript 才能加载项目列表（数据来自 projects.json）。</p></noscript>
 <footer>Generated for fsg-contract / FDE Discovery · 全部业务上下文取自训练系统项目档案（合成数据）</footer>
 </div>
 <script>
-function filter(){const q=document.getElementById('q').value.trim().toLowerCase();
-document.querySelectorAll('section').forEach(s=>{let vis=0;s.querySelectorAll('.item').forEach(a=>{const ok=a.textContent.toLowerCase().includes(q);a.style.display=ok?'flex':'none';if(ok)vis++;});s.style.display=vis?'block':'none';});}
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let projects=[];
+async function init(){
+  try{
+    const res=await fetch('projects.json');
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    projects=await res.json();
+  }catch(e){
+    document.getElementById('content').innerHTML=
+      '<p class="error">项目列表（projects.json）加载失败：'+esc(e.message)+
+      '。若直接以 file:// 打开本页，浏览器会阻止 fetch，请在仓库根目录运行 <code>python -m http.server</code> 后访问 <code>http://localhost:8000/site/</code>。</p>';
+    return;
+  }
+  const sectors=[...new Set(projects.map(p=>p.sector))];
+  const nDoc=projects.filter(p=>p.docx).length;
+  document.getElementById('stats').innerHTML=
+    '<div class="stat">📦 项目总数：'+projects.length+'</div>'+
+    '<div class="stat">🏷 业务域：'+sectors.length+'</div>'+
+    '<div class="stat">📄 文档：'+nDoc+' 份 DOCX</div>';
+  const sel=document.getElementById('sector');
+  sel.innerHTML='<option value="">全部业务域（'+sectors.length+'）</option>'+
+    sectors.map(s=>'<option value="'+esc(s)+'">'+esc(s)+'（'+projects.filter(p=>p.sector===s).length+'）</option>').join('');
+  render();
+}
+function render(){
+  const sel=document.getElementById('sector').value;
+  const picked=sel?projects.filter(p=>p.sector===sel):projects;
+  // 分组：业务域按组内最小编号排序，组内按编号排序（与旧版静态页一致）
+  const bySector=new Map();
+  picked.forEach(p=>{if(!bySector.has(p.sector))bySector.set(p.sector,[]);bySector.get(p.sector).push(p);});
+  const order=[...bySector.keys()].sort((a,b)=>Math.min(...bySector.get(a).map(p=>p.idx))-Math.min(...bySector.get(b).map(p=>p.idx)));
+  document.getElementById('content').innerHTML=order.map(s=>
+    '<section><h2>'+esc(s)+' <small>('+bySector.get(s).length+')</small></h2><div class="grid">'+
+    bySector.get(s).sort((a,b)=>a.idx-b.idx).map(p=>
+      '<a class="item" href="'+esc(p.html)+'"><b>'+esc(p.idx)+' '+esc(p.name)+'</b>'+
+      (p.company?'<span>'+esc(p.company)+'</span>':'')+'</a>').join('')+
+    '</div></section>').join('')||'';
+}
+function filter(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const sel=document.getElementById('sector').value;
+  render();
+  let vis=0;
+  document.querySelectorAll('#content section').forEach(s=>{
+    let n=0;s.querySelectorAll('.item').forEach(a=>{
+      const ok=a.textContent.toLowerCase().includes(q);
+      a.style.display=ok?'flex':'none';if(ok)n++;});
+    s.style.display=n?'block':'none';vis+=n;
+  });
+  const c=document.getElementById('content');
+  if(!vis){
+    c.innerHTML+='<p class="empty" id="noResult">🔍 没有匹配的项目，换个关键词或业务域试试</p>';
+  }
+}
+init();
 </script></body></html>
